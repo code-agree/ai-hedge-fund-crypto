@@ -126,6 +126,8 @@ def generate_trading_decision(
                 - current_prices: current prices for each ticker
                 - margin_requirement: current margin requirement for short positions (e.g., 0.5 means 50%)
                 - total_margin_used: total margin currently in use
+                
+                CRITICAL: Your response MUST be ONLY valid JSON. Do not include ANY explanatory text, analysis, or commentary before or after the JSON. Any text outside of the JSON structure will cause parsing errors.
                 """,
             ),
             (
@@ -161,6 +163,13 @@ def generate_trading_decision(
                     ...
                   }}
                 }}
+                
+                IMPORTANT: 
+                1. Return ONLY the JSON object above. 
+                2. Do NOT include any explanations, analysis, or additional text outside the JSON.
+                3. Do NOT use markdown formatting like ```json or ```.
+                4. Your entire response must be a single, valid JSON object.
+                5. If you include ANY text outside the JSON structure, it will cause a critical error.
                 """,
             ),
         ]
